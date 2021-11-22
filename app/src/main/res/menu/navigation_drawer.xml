@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:checked="true"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="Home" />
+        <item
+            android:id="@+id/quiz"
+            android:checked="false"
+            android:icon="@drawable/ic_baseline_question_answer_24"
+            android:title="Quiz Time" />
+        <item
+            android:id="@+id/profile"
+            android:checked="false"
+            android:icon="@drawable/ic_baseline_account_box_24"
+            android:title="Profile" />
+        <item
+            android:id="@+id/listOfQuestions"
+            android:checked="false"
+            android:icon="@drawable/ic_baseline_format_list_bulleted_24"
+            android:title="List of questions" />
+        <item
+            android:id="@+id/newQuestion"
+            android:checked="false"
+            android:icon="@drawable/ic_baseline_add_box_24"
+            android:title="New Question" />
+    </group>
+</menu>
