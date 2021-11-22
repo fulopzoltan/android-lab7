@@ -9,6 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
+import org.w3c.dom.Text
 import quiz.Question
 
 class QuestionListAdapter(private val questionList: MutableList<Question>, private val onClick: OnQuestionClickedListener) :
@@ -18,6 +19,7 @@ class QuestionListAdapter(private val questionList: MutableList<Question>, priva
         val answerText: TextView = view.findViewById(R.id.answer)
         val buttonDetails: Button = view.findViewById(R.id.button_details)
         val buttonDelete: Button = view.findViewById(R.id.button_delete)
+        val category: TextView = view.findViewById(R.id.category)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -42,6 +44,7 @@ class QuestionListAdapter(private val questionList: MutableList<Question>, priva
         val currentQuestion = questionList[position]
         holder.questionText.text = currentQuestion.text
         holder.answerText.text = currentQuestion.correctAnswer
+        holder.category.text = currentQuestion.category
     }
 
     override fun getItemCount(): Int = questionList.size

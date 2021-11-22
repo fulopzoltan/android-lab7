@@ -38,7 +38,8 @@ class QuestionNewFragment : Fragment() {
             val question = Question(
                 questionText,
                 answers = mutableListOf(correct, wrong1, wrong2, wrong3),
-                correctAnswer = correct
+                correctAnswer = correct,
+                category = "NEW"
             )
             viewModel.addQuestion(question)
             (requireActivity() as MainActivity).replaceFragment(R.id.fragment_container_view,QuestionListFragment())

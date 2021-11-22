@@ -67,7 +67,7 @@ class QuizViewModel : ViewModel() {
                 Log.d("QUESTIONS", it.toString())
                 val answers: MutableList<String> = it.incorrectAnswers as MutableList<String>
                 answers.add(it.correctAnswer)
-                questionsFromApi.add(Question(it.question, answers, it.correctAnswer))
+                questionsFromApi.add(Question(it.question, answers, it.correctAnswer,it.category))
             }
             questions.value = questionsFromApi
             doQuiz(4)

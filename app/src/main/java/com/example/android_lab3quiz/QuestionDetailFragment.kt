@@ -31,6 +31,7 @@ class QuestionDetailFragment : Fragment() {
         
         binding.question.text = question.text
         binding.answerCorrect.text = question.correctAnswer
+        binding.category.text = question.category
         binding.answer1.text = question.answers[0];
         binding.answer2.text = question.answers[1];
         binding.answer3.text = question.answers[2];
